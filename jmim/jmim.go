@@ -12,7 +12,7 @@ import (
 func main() {
 	fmt.Println("Hello world")
 	app := &cli.App{
-		Name:  "greet",
+		Name:  "jmim",
 		Usage: "fight the loneliness!",
 		Action: func(*cli.Context) error {
 			fmt.Println("Hello friend!")
