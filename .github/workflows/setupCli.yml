@@ -3,7 +3,7 @@ name: Clone repository and build JMIM command line tool.
 on: fork
 jobs:
   clone:
-    runs-on: [ macos-latest, ubuntu-latest ]
+    runs-on: macos-latest
     steps:
       - name: Clone repository to local machine
         uses: DeraUchenwoke/jmim@main
@@ -18,21 +18,21 @@ jobs:
           cd jmim
           ls -la
   clean:
-    runs-on: [ macos-latest, ubuntu-latest ]
+    runs-on: macos-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@main
       - name: clean
         run: make clean
   build:
-    runs-on: [ macos-latest, ubuntu-latest ]
+    runs-on: macos-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@main
       - name: build application
         run: make build
   test:
-    runs-on: [ macos-latest, ubuntu-latest ]
+    runs-on: macos-latest
     steps:
       - name: checkout repo
         uses: actions/checkout@main
