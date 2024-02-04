@@ -8,5 +8,4 @@ jobs:
       - name: Clone repository to local machine
         uses: actions/checkout@main
         with:
-          owner: 'DeraUchenwoke'
-          repository: 'jmim'
+          repository: 'DeraUchenwoke/jmim'
