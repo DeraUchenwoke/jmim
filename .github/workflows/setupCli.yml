@@ -1,41 +1,12 @@
 # Setup CLI to run make clean, build, test when the repo is cloned.
-name: Clone repository and build JMIM command line tool.
+name: Clone jmim repository.
 on: fork
 jobs:
   clone:
     runs-on: macos-latest
     steps:
       - name: Clone repository to local machine
-        uses: DeraUchenwoke/jmim@main
+        uses: actions/checkout@main
         with:
           owner: 'DeraUchenwoke'
           repository: 'jmim'
-      - name: Access cloned repository content
-        run: |
-          echo "ROOT"
-          ls -la
-          echo "CLONED REPO"
-          cd jmim
-          ls -la
-  clean:
-    runs-on: macos-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@main
-      - name: clean
-        run: make clean
-  build:
-    runs-on: macos-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@main
-      - name: build application
-        run: make build
-  test:
-    runs-on: macos-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@main
-      - name: test application
-        run: make test
-

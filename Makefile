@@ -1,7 +1,9 @@
 #!/bin/bash
+
 CLI_NAME=jmim
 GO_CMD=go
 EXEC_PATH=${HOME}/sdk/bin
+REPO=github.com/DeraUchenwoke
 
 clean:
 	# Redirect stdout '1' and stderr '2' to null device file '/dev/null'.
@@ -11,7 +13,9 @@ build:
 	# Build executable if 'go' command exists.
 	if ! command -v "${GO_CMD}" > /dev/null 2>&1; \
 	then echo "The '${GO_CMD}' command does not exist." && exit 1; \
-	else cd ${CLI_NAME} && echo "Adding ${CLI_NAME} to GOPATH..." && ${GO_CMD} install; \
+	else cd ${CLI_NAME} && echo "Adding ${CLI_NAME} to GOPATH..."
+	&& ${GO_CMD} mod init ${REPO}/${CLI_NAME} \
+	&& ${GO_CMD} mod tidy && ${GO_CMD} install; \
 	fi;
 
 test:
