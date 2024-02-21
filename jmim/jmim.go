@@ -1,28 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"os"
-
-	cli "github.com/urfave/cli/v2"
+	"github.com/DeraUchenwoke/jmim/utils"
 )
 
-// Using examples to start with: https://github.com/urfave/cli/tree/main/docs/v2/examples
 func main() {
-	fmt.Println("Hello world")
-	app := &cli.App{
-		Name:  "jmim",
-		Usage: "fight the loneliness!",
-		Action: func(*cli.Context) error {
-			fmt.Println("Hello friend!")
-			return nil
-		},
-	}
 
-	if err := app.Run(os.Args); err != nil {
-		log.Fatal(err)
-	}
+	filePath := "/Users/chidera.uchenwoke/Documents/my_projects/jmim/tests/data/APPL.csv"
+	utils.GetFileInfo(filePath)
 
-	// Very rough plan: 1) Create JMIM function with CSV files 2) Create CLI tool to use it
 }
