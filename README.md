@@ -19,3 +19,8 @@ For those interested to know how the algorithm above was derived go to section *
 ## Usage 
 
 ### Examples
+
+## Style guide & practices
+[Google style guide](https://google.github.io/styleguide/cppguide.html#The__define_Guard).
+
+The tool was written in line with [CPP core guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main).
