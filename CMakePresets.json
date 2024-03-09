@@ -1,0 +1,17 @@
+{
+    "version": 8,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 28,
+      "patch": 0
+    },
+    "configurePresets": [
+      {
+        "name": "custom",
+        "displayName": "Custom Visual Studio Release - x86_amd64",
+        "description": "Custom default build for JMIM project",
+        "generator": "Visual Studio 17 2022",
+        "binaryDir": "${sourceDir}/build/MSVC"
+      }
+    ]
+}

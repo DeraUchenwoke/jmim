@@ -1,0 +1,6 @@
+# Necessary to link Google benchmark ________________________________________________________________________________________________
+find_package(benchmark REQUIRED)
+
+add_executable(benchmark_io read_file.cpp)
+
+target_link_libraries(benchmark_io PRIVATE benchmark::benchmark benchmark::benchmark_main)
