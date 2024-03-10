@@ -24,5 +24,6 @@ Use build/ to create executable: `cmake --build build --config release`
 
 ## Style guide & practices
 [Google style guide](https://google.github.io/styleguide/cppguide.html#The__define_Guard).
+[Powershell practice and style](https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Style-Guide/Code-Layout-and-Formatting.md)
 
 The tool was written in line with [CPP core guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main).
