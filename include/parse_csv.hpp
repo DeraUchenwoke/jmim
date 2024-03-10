@@ -4,6 +4,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <vector>
+#include <sstream>
 
 /*
     - Try to open file (in chunks if it is large)
@@ -14,20 +16,42 @@
     - Populate processed data into an appropriate data structure (based on size of CSV?).
 */
 
-bool FileExists(const std::string &path)
-{
-    std::ifstream fs(path); 
-    return fs.is_open(); 
+std::string GetLineCSV(const std::string &path) 
+{  
+    std::ifstream fs(path);
+    std::string raw_file_contents; 
+
+    if (fs.is_open())
+    {
+        std::string elem; 
+        while(std::getline(fs, elem)) 
+        {
+            raw_file_contents += elem;
+        }
+        fs.close();
+    }
+    else 
+    {
+        std::cerr << "File does not exist." << std::endl;
+        return raw_file_contents;
+    }
+    return raw_file_contents; 
 }
 
-void ReadCSV(const std::string &path) 
-{ 
-    if (FileExists(path))
+std::string StreamCSV(const std::string &path)
+{
+    std::ifstream fs(path);
+    std::ostringstream sstr; 
+
+    if (fs.is_open())
     {
-        std::cout << "File exists: " << path << std::endl;
+        sstr << fs.rdbuf();
     }
-    else {
-        std::cout << "could not find file";
+    else 
+    {
+        std::cerr << "File again does not exist." << std::endl;
+        return "";
     }
+    return sstr.str(); 
 }
 #endif
