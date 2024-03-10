@@ -17,6 +17,8 @@ For those interested to know how the algorithm above was derived go to section *
 ## Installation
 
 ## Usage 
+Create the build directory: `cmake -S . -B build`
+Use build/ to create executable: `cmake --build build --config release` 
 
 ### Examples
 

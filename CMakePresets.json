@@ -13,13 +13,5 @@
         "generator": "Visual Studio 17 2022",
         "binaryDir": "${sourceDir}/build"
       }
-    ],
-    "buildPresets": [
-      {
-        "name": "app-release",
-        "displayName": "App Release Build",
-        "configurePreset": "base",
-        "configuration": "Release"
-      }
     ]
 }
