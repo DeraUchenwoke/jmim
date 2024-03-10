@@ -7,11 +7,19 @@
     },
     "configurePresets": [
       {
-        "name": "custom",
-        "displayName": "Custom Visual Studio Release - x86_amd64",
-        "description": "Custom default build for JMIM project",
+        "name": "base",
+        "displayName": "Base Visual Studio Release - x86_amd64",
+        "description": "Base default build for JMIM project",
         "generator": "Visual Studio 17 2022",
-        "binaryDir": "${sourceDir}/build/MSVC"
+        "binaryDir": "${sourceDir}/build"
+      }
+    ],
+    "buildPresets": [
+      {
+        "name": "app-release",
+        "displayName": "App Release Build",
+        "configurePreset": "base",
+        "configuration": "Release"
       }
     ]
 }
