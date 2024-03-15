@@ -15,6 +15,9 @@ The purpose of this repository is to use JMIM to create a tool which selects the
 For those interested to know how the algorithm above was derived go to section *3.4.1* of my final year project [paper](./final_project.pdf).
 
 ## Installation
+For Windows users:
+1. Clone the repository: `git clone https://github.com/DeraUchenwoke/jmim.git`
+2. In PowerShell terminal run: `cd scripts` followed by `.\setup.ps1`.
 
 ## Usage 
 
@@ -22,5 +25,6 @@ For those interested to know how the algorithm above was derived go to section *
 
 ## Style guide & practices
 [Google style guide](https://google.github.io/styleguide/cppguide.html#The__define_Guard).
+[Powershell practice and style](https://github.com/PoshCode/PowerShellPracticeAndStyle/blob/master/Style-Guide/Code-Layout-and-Formatting.md).
 
 The tool was written in line with [CPP core guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#main).

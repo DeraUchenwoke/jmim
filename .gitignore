@@ -1,6 +1,13 @@
-# Prerequisites
+# Visusal Studio-specific files
 *.d
 *.vscode
+*.cmake
+*.vcxproj
+*.vcxproj.filters
+*.sln
+
+# Build folder(s)
+build
 
 # Compiled Object files
 *.slo
