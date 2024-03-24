@@ -15,6 +15,11 @@ The purpose of this repository is to use JMIM to create a tool which selects the
 For those interested to know how the algorithm above was derived go to section *3.4.1* of my final year project [paper](./final_project.pdf).
 
 ## Installation
+
+### Prerequisites
+This program requires: 
+- cmake (At least version 3.8)
+
 For Windows users:
 1. Clone the repository: `git clone https://github.com/DeraUchenwoke/jmim.git`
 2. In PowerShell terminal run: `cd scripts` followed by `.\setup.ps1`.
